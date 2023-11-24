@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect
-
+import random
 app = Flask(__name__)
 
 # Route untuk homepage - Nomor 1
@@ -80,6 +80,39 @@ def hasil_form():
         data = list(reader)
 
     return render_template('hasilform.html', data=data)
+
+# Laman Kerang Ajaib
+
+kalimat = [
+    "Iya, jalani langkah-langkahmu dengan keyakinan.",
+    "Tidak, cuaca mungkin akan mengejutkanmu.",
+    "Bergantung pada intuisimu, mungkin baik untuk mendengarkan teman.",
+    "Cinta sejati seperti gelombang laut yang datang dan pergi.",
+    "Rencanamu mungkin sukses, tetapi semuanya tergantung pada usahamu.",
+    "Keberuntungan seringkali hadir kepada yang bersiap.",
+    "Cobalah hal baru, dan lihatlah apa yang terjadi.",
+    "Mungkin, tetapi pertemuan istimewa memerlukan waktu.",
+    "Ya, saatnya mengambil risiko dan melangkah maju.",
+    "Ada kemungkinan petualangan menarik menanti di depanmu."
+]
+
+@app.route('/formkerangajaib')
+def form_kerang():
+    return render_template('formskerang.html')
+
+@app.route('/kerangajaib/', methods=['GET', 'POST'])
+def kerangajaib():
+    if request.method == 'POST':
+        name = request.form.get('nama')
+        sentence = f"Selamat datang, {name}, anda berhasil masuk ke Puja Kerang Ajaib"
+        return render_template('kerangajaib.html', sentence=sentence)
+    elif request.method == 'GET':
+        name = request.args.get('nama')
+        if not name:
+            sentence = random.choice(kalimat)
+        else:
+            sentence = f"{name.capitalize()}, {random.choice(kalimat).lower()}"
+        return render_template('kerangajaib.html', sentence=sentence)
 
 if __name__ == "__main__":
     app.run(debug=True)

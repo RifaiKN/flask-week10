@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klub Kerang Ajaib</title>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.2/dist/tailwind.min.css">
+</head>
+
+<body class="bg-blue-900 text-white flex flex-col items-center justify-center min-h-screen">
+    <h1 class="text-4xl font-bold mb-4">Puja Kerang Ajaib</h1>
+    <div class="m-4 p-4 bg-blue-500 rounded-2xl text-white">
+        {{ sentence }}
+    </div>
+    <!-- Add the image tag below -->
+    <img src="{{ url_for('static', filename='spongebob-patrick.gif') }}" alt=""
+         class="mt-4 max-w-full">
+    <div>
+        <div class="flex">
+            <a href="/formkerangajaib" class="m-4 p-4 bg-red-500 hover:bg-red-600 rounded-2xl text-white">Kembali</a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Klub SpongeBob</title>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.2/dist/tailwind.min.css">
+</head>
+
+<body class="bg-blue-900 text-white flex flex-col items-center justify-center min-h-screen">
+    <h1 class="text-4xl font-bold mb-4">Form Pengisian</h1>
+    <a href="/kerangajaib/" class="m-4 p-4 bg-green-500 hover:bg-green-600 rounded-2xl text-white">Info kata kata hari ini?</a>
+    <div class="flex">
+        <!-- POST Form -->
+        <form action="/kerangajaib/" method="post" class="flex flex-col items-center border border-blue-500 p-8 rounded-md mb-4">
+            <h2 class="text-2xl font-bold mb-4">Form POST</h2>
+            <label for="namaPost" class="text-white">Nama:</label>
+            <input type="text" id="namaPost" name="nama" required
+                class="bg-blue-600 text-white p-2 rounded-2xl focus:outline-none focus:ring focus:border-blue-300 mb-4">
+            <button type="submit" class="m-4 p-4 bg-blue-500 hover:bg-blue-600 rounded-2xl text-white">Submit</button>
+        </form>
+
+        <!-- GET Form -->
+        <form action="/kerangajaib/" method="get" class="flex flex-col items-center border border-blue-500 p-8 rounded-md mb-4 ml-2">
+            <h2 class="text-2xl font-bold mb-4">Form GET</h2>
+            <label for="namaGet" class="text-white">Nama:</label>
+            <input type="text" id="namaGet" name="nama" required
+                class="bg-blue-600 text-white p-2 rounded-2xl focus:outline-none focus:ring focus:border-blue-300 mb-4">
+            <button type="submit" class="m-4 p-4 bg-blue-500 hover:bg-blue-600 rounded-2xl text-white">Submit</button>
+        </form>
+    </div>
+    <!-- Navigation Link -->
+    <div>
+        <div class="flex">
+            <a href="/" class="m-4 p-4 bg-red-500 hover:bg-red-600 rounded-2xl text-white">Kembali</a>
+        </div>
+    </div>
+</body>
+
+</html>
