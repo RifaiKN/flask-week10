@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil | Rifai</title>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.2/dist/tailwind.min.css">
+</head>
+
+<body class="bg-blue-900 text-white flex flex-col items-center justify-center min-h-screen">
+    <div class="">
+        <img src="{{ url_for('static', filename='fotoprofil.jpg')}}" alt="" class="h-60 rounded-3xl mb-4">
+    </div>
+    <div class="">
+        <h1 class="text-4xl font-bold mb-4">My Profile</h1>
+        <p><span class="font-bold">Nama Lengkap</span> : Raden Bagus Rifai Kacanegara</p>
+        <p><span class="font-bold">Tanggal Lahir</span> : 20 Desember 2002</p>
+        <p><span class="font-bold">Warna Favorit</span> : Biru dan Ungu</p>
+        <p><span class="font-bold">Role Model</span> : Lionel Messi</p>
+        <p><span class="font-bold">Fun Fact</span> : Suka Tidur</p>
+    </div>
+
+        <!-- Button Back Home -->
+        <a href="/" class="m-4 p-4 bg-red-500 hover:bg-red-600 rounded-2xl text-white">Back to Home</a>
+
+</body>
+
+</html>

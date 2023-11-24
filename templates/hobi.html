@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobi | Rifai</title>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.2/dist/tailwind.min.css">
+</head>
+
+<body class="bg-blue-900 text-white flex flex-col items-center justify-center min-h-screen">
+    <h1 class="text-4xl font-bold mb-4">Hobi-hobi Saya</h1>    
+    <div class="">
+        <img src="{{ url_for('static', filename='hobi1.jpg')}}" alt="" class="h-60 rounded-3xl mb-4">
+        <p class="font-bold flex items-center justify-center mb-4">Bermain Futsal</p>
+    </div>
+    <div class="">
+        <img src="{{ url_for('static', filename='hobi2.jpg')}}" alt="" class="h-60 rounded-3xl mb-4">
+        <p class="font-bold flex items-center justify-center">Tidur</p>
+    </div>
+    <div class="">
+        <img src="{{ url_for('static', filename='hobi3.jpg')}}" alt="" class="h-60 rounded-3xl mb-4">
+        <p class="font-bold flex items-center justify-center">Game Kompetitif</p>
+    </div>
+        <!-- Button Back Home -->
+        <a href="/" class="m-4 p-4 bg-red-500 hover:bg-red-600 rounded-2xl text-white">Kembali</a>
+
+</body>
+
+</html>

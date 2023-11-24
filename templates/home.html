@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.2/dist/tailwind.min.css">
+</head>
+
+<body class="bg-blue-900 text-white flex flex-col items-center justify-center min-h-screen">
+    <div class="">
+        <img src="{{ url_for('static', filename='rifai.png')}}" alt="" class="h-60 mb-4">
+    </div>
+    <div class="">
+        <h1 class="text-4xl font-bold mb-4">Rifai Kacanegara's Homepage</h1>
+    </div>
+    <div class="flex">
+        <a href="/profil" class="m-2 p-4 bg-blue-600 hover:bg-blue-700 rounded-2xl">Profil</a>
+        <a href="/hobi" class="m-2 p-4 bg-blue-600 hover:bg-blue-700 rounded-2xl">Hobi</a>
+        <a href="/pendidikan" class="m-2 p-4 bg-blue-600 hover:bg-blue-700 rounded-2xl">Pendidikan</a>
+        <a href="/pengalaman" class="m-2 p-4 bg-blue-600 hover:bg-blue-700 rounded-2xl">Pengalaman</a>
+    </div>
+    <div class="flex mt-2">
+        <a href="/fibonacci" class="m-2 p-4 bg-blue-600 hover:bg-blue-700 rounded-2xl">Fibonacci</a>
+        <a href="/getjson" class="m-2 p-4 bg-blue-600 hover:bg-blue-700 rounded-2xl">Tampilkan Data JSON</a>
+        <a href="/form" class="m-2 p-4 bg-blue-600 hover:bg-blue-700 rounded-2xl">Forms</a>
+        <a href="/hasilform" class="m-2 p-4 bg-blue-600 hover:bg-blue-700 rounded-2xl">Hasil Form</a>
+    </div>
+</body>
+<footer class="bg-blue text-light text-center py-2">
+    <p>&copy; Alpro 2 2023 | Created by Rifai Kacanegara</p>
+</footer>
+</html>

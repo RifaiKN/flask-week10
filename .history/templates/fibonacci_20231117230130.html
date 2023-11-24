@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci | Rifai</title>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.2/dist/tailwind.min.css">
+</head>
+<body class="bg-blue-900 text-white flex flex-col items-center justify-center min-h-screen">
+    {% if result %}
+        <div>
+            <a href="/" class="m-4 p-4 bg-red-500 hover:bg-red-600 rounded-2xl text-white">Kembali</a>
+        </div>
+        <div class="mt-10">
+            <h1 class="text-4xl font-bold mb-4">Fibonacci Calculator</h1>
+        </div>
+        <div class="mb-10">
+            <h2>Deret Fibonacci:</h2>
+        </div>
+        <div>
+            <p>{{ result|join(' ') }}</p>
+        </div>
+    {% else %}
+        <div class="">
+            <h1 class="text-4xl font-bold mb-4">Fibonacci Calculator</h1>
+        </div>
+        <form action="/fibonacci" method="post">
+            <label for="length">Panjang (n) Fibonacci:</label>
+            <input type="number" name="length" placeholder="contoh: 2" required style="color: black;">
+            <button class="m-4 p-4 bg-yellow-500 hover:bg-yellow-600 rounded-2xl text-white" type="submit">Hitung</button>
+            <div>
+                <a href="/" class="m-4 p-4 bg-red-500 hover:bg-red-600 rounded-2xl text-white">Kembali</a>
+            </div>
+        </form>
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+            <div>
+                <a href="/" class="m-4 p-4 bg-red-500 hover:bg-red-600 rounded-2xl text-white">Kembali</a>
+            </div>
+        {% endif %}
+    {% endif %}
+</body>

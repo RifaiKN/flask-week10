@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Form</title>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2.2/dist/tailwind.min.css">
+</head>
+
+<body class="bg-blue-900 text-white flex flex-col items-center justify-center min-h-screen">
+    <div>
+        <a href="/" class="m-4 p-4 bg-red-500 hover:bg-red-600 rounded-2xl text-white">Kembali</a>
+    </div>
+    <h1 class="mt-10 text-4xl font-bold mb-4">Hasil Form Submit</h1>
+    <table class="border-collapse border-2 border-blue-600 bg-blue-800 text-white w-full">
+        <thead>
+            <tr>
+                <th class="p-2 border-2 border-blue-600">Nama</th>
+                <th class="p-2 border-2 border-blue-600">Email</th>
+                <th class="p-2 border-2 border-blue-600">Pesan</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+            <tr>
+                <td class="p-2 border-2 border-blue-600">{{ row['Nama'] }}</td>
+                <td class="p-2 border-2 border-blue-600">{{ row['Email'] }}</td>
+                <td class="p-2 border-2 border-blue-600">{{ row['Pesan'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>
